@@ -1,6 +1,7 @@
 {
-  "version": "0.3.0",
-  "validation": {
+  "version": "0.4.0",
+  "change": "small tasks in chat; large tasks saved with memory index; optional checks handled by AI",
+  "background_validation_from_0_3": {
     "automated_tests": 18,
     "passed": 18,
     "pipeline_cases": 7,
@@ -8,11 +9,11 @@
   },
   "files": {
     ".gitignore": "e62399d951404d2bdccb60f28b336cea04914a5072f33cce7855cf56e21cd362",
-    "EVALUATION.md": "ae59a728b5e754b63dd44ad62b23acf2ee76fc985c3c8e706c093099d72e50e5",
-    "GITHUB_INTRO.md": "a57b93aec01960e720faf7c5a501937b9376886463e815fc3bf2dd7332830290",
-    "README.md": "199eeb2177c36cd6877baac5bdbdaf7c81238be0a5f472ab8ec6a7fefe3b1b6b",
-    "SKILL.md": "c877a12c6a409200324606761300c2c31520dd8701f5c3a17d7b24fb13c5a90c",
-    "agents/openai.yaml": "ba1e2ac2a98788728db24aa5cccfc2d1c8ca0ea81dba91d359fed8d36b42430f",
+    "EVALUATION.md": "83514449eb3314772ddcc990b668099d1704a795f11c23ea39a79e3b86558381",
+    "GITHUB_INTRO.md": "c7c4cdb8a5fb63a4f17fae453f8be0fc82de05420f3b61ded16c6f59eb9d07fa",
+    "README.md": "b2aae3cf533c02726e7ccdb22d0aa916c9d4417df451bf4653cf4a2a0358d18d",
+    "SKILL.md": "83da5a29b74b9090fb14987e97f07ae3168d52a0b62aab707208aa58b6dc914c",
+    "agents/openai.yaml": "01981e42197ba2f6a9031d69fa99e4db9e14dacaff552ddd6f55d916e55516ec",
     "eval/EXPECTED_EXAMPLE.md": "a4b4f24746af2563735bbe014961800c15c5788993a6d88d2973a0583e7821e7",
     "eval/README.md": "11f93700869e28ed2e0ac7a05f6f4edaa622de54db9af24b3fd1c12e6ac13aca",
     "eval/USER_CHECK.md": "ff4e915876dce90013c13703573f6a28aadfeb0ddf8a59d316f49f24f5066b4f",
@@ -80,6 +81,9 @@
     "eval/versions/v2/SKILL.md": "6f81794403eef4722d1f5d483cc31f02d562cbd6a301e4978c10cef6393977b2",
     "eval/versions/v2/references/metrics-and-evidence.md": "df16ca461a9af7388181266f0c944bc575bd60ef4bd1a27bc53cb1b0986734c1",
     "eval/versions/v2/references/task-patterns.md": "8695fddb12f51f19282dd1d7e4cba860331053c2509af98236d8db2704547904",
+    "eval/versions/v3/SKILL.md": "c877a12c6a409200324606761300c2c31520dd8701f5c3a17d7b24fb13c5a90c",
+    "eval/versions/v3/references/evidence-card.md": "7dda444a6b978a13e5a9bc023b5c416b06351916bd7ddb894e3bfe8aa0ad208c",
+    "eval/versions/v3/references/metrics-and-evidence.md": "df16ca461a9af7388181266f0c944bc575bd60ef4bd1a27bc53cb1b0986734c1",
     "references/evidence-card.md": "7dda444a6b978a13e5a9bc023b5c416b06351916bd7ddb894e3bfe8aa0ad208c",
     "references/metrics-and-evidence.md": "df16ca461a9af7388181266f0c944bc575bd60ef4bd1a27bc53cb1b0986734c1",
     "references/task-patterns.md": "8695fddb12f51f19282dd1d7e4cba860331053c2509af98236d8db2704547904",

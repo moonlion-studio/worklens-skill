@@ -1,4 +1,4 @@
 interface:
   display_name: "WorkLens｜工作价值解读器"
-  short_description: "把AI协作中的真实任务转成专业判断、指标证据和能讲清的面试与汇报表达"
-  default_prompt: "使用 $work-impact-debrief 完成当前任务，并基于实际改动解释所属领域、专业概念、取舍与验证，给出面试和工作汇报讲法。"
+  short_description: "小任务直接讲清，大任务自动写报告并保存结论与文件索引，帮你准备面试和汇报"
+  default_prompt: "使用 $work-impact-debrief 完成任务，小任务直接在对话里讲清专业意义，大任务写报告并保存结论和文件索引。"
