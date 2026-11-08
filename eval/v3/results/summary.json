@@ -1,0 +1,11 @@
+{
+  "model_calls": 7,
+  "accepted_plans": 7,
+  "guarded_fallbacks": 0,
+  "reports": 10,
+  "cards": "curated exact-source excerpts, not model extraction accuracy",
+  "scope": "code-enforced report invariants; not unbounded model writing or human interview efficacy",
+  "renderer_sha256": "8604e669e29ec3ee13c6a7922207011c8dd781eec7c8e634067c0ef312a43ecb",
+  "skill_sha256": "c877a12c6a409200324606761300c2c31520dd8701f5c3a17d7b24fb13c5a90c",
+  "evidence_cards": "curated exact excerpts; no automatic extraction efficacy claim"
+}

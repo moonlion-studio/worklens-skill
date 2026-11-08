@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "title": "H02",
+  "profile": "evaluation",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "构造开发集12题，历史基线0题通过，候选3题通过；不同时间比较；评分未独立复核。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "构造开发集12题，历史基线0题通过，候选3题通过"
+    },
+    {
+      "id": "f2",
+      "kind": "status",
+      "source": "s1",
+      "quote": "不同时间比较"
+    },
+    {
+      "id": "f3",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "评分未独立复核"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "historical",
+      "facts": [
+        "f1",
+        "f2"
+      ]
+    },
+    {
+      "term": "gold",
+      "facts": [
+        "f3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "kind": "offline_comparison",
+      "refs": [
+        "f1"
+      ],
+      "total": 12,
+      "baseline": 0,
+      "candidate": 3
+    }
+  ],
+  "brief": false
+}

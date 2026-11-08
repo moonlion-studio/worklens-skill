@@ -1,0 +1,13 @@
+{
+  "plan_status": "not_requested",
+  "rejected_reason": null,
+  "source_hashes": {
+    "s1": "8b5a90039e8bf6f51bad0c2722933730024899fff04f2837c42640a802c0e6c6"
+  },
+  "facts": 3,
+  "metrics": [
+    "所给离线样本通过率：0% → 25%，变化 25 个百分点。",
+    "基线通过率为 0，不计算相对提升。"
+  ],
+  "renderer": "worklens-0.3"
+}

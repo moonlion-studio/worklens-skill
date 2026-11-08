@@ -1,0 +1,28 @@
+{
+  "case": "C03",
+  "model": "qwen2.5:7b",
+  "model_role": "bounded concept ordering only; facts and narratives rendered by code",
+  "options": {
+    "temperature": 0.2,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 300
+  },
+  "raw_plan": "{\"concept_order\": [\"historical\", \"gold\", \"regression\"]}",
+  "transport_error": null,
+  "model_done_reason": "stop",
+  "seconds": 1.332,
+  "audit": {
+    "plan_status": "accepted",
+    "rejected_reason": null,
+    "source_hashes": {
+      "s1": "e735a4068cb0c889962d756b8769e7e30bb258ba41dfe6da7652100a2bed8500"
+    },
+    "facts": 6,
+    "metrics": [
+      "所给离线样本通过率：56% → 72%，变化 16 个百分点。",
+      "相对变化：28.57%；不称为同期随机 A/B 或生产准确率。"
+    ],
+    "renderer": "worklens-0.3"
+  }
+}

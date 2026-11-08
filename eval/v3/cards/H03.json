@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "title": "H03",
+  "profile": "unknown",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "想优化导出权限，还没有改动、测试或发布记录。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "想优化导出权限"
+    },
+    {
+      "id": "f2",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "还没有改动、测试或发布记录"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "scope",
+      "facts": [
+        "f1",
+        "f2"
+      ]
+    }
+  ],
+  "metrics": [],
+  "brief": false
+}

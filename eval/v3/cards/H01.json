@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "title": "H01",
+  "profile": "constraints",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "构造规则测试16份方案12份满足全部约束；没有生产采纳记录。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "构造规则测试16份方案12份满足全部约束"
+    },
+    {
+      "id": "f2",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "没有生产采纳记录"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "constraints",
+      "facts": [
+        "f1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "kind": "rule_rate",
+      "refs": [
+        "f1"
+      ],
+      "total": 16,
+      "passed": 12
+    }
+  ],
+  "brief": false
+}

@@ -1,0 +1,27 @@
+{
+  "case": "C02",
+  "model": "qwen2.5:7b",
+  "model_role": "bounded concept ordering only; facts and narratives rendered by code",
+  "options": {
+    "temperature": 0.2,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 300
+  },
+  "raw_plan": "{\"concept_order\": [\"rules\", \"constraints\"]}",
+  "transport_error": null,
+  "model_done_reason": "stop",
+  "seconds": 0.979,
+  "audit": {
+    "plan_status": "accepted",
+    "rejected_reason": null,
+    "source_hashes": {
+      "s1": "4a26e91b970a71b6ee70bea3f5445492f7a5464c14b46a5ae441e7ee8eb744c6"
+    },
+    "facts": 6,
+    "metrics": [
+      "所给样本规则满足率：28/35 = 80%；不代表 LLM 准确率或真实采纳率。"
+    ],
+    "renderer": "worklens-0.3"
+  }
+}

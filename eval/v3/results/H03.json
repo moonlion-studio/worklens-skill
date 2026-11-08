@@ -1,0 +1,12 @@
+{
+  "plan_status": "not_requested",
+  "rejected_reason": null,
+  "source_hashes": {
+    "s1": "dc7b9fb3805c17480190048ac651011bef8c99c0490fc38b6663a1f0f74c6754"
+  },
+  "facts": 2,
+  "metrics": [
+    "未提交可计算的指标；不生成效率、质量或业务收益数字。"
+  ],
+  "renderer": "worklens-0.3"
+}

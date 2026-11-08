@@ -4,7 +4,7 @@
 
 WorkLens 是一个面向 AI 协作开发者的 Skill。它在原任务交付后，结合实际需求、改动与验证记录，解释这是什么领域的问题、采用了哪些专业机制、方案如何取舍、结果能证明到哪一步，并生成面试回答、工作汇报和理解追问。
 
-当前作为预览版发布：输出需要使用者核对事实；本机小模型测试已发现补写证据和概念混淆等问题，具体记录见测试报告。生成报告不等于使用者已经掌握相关能力。
+报告经过 **来源事实卡 → 引用校验 → 指标计算 → 受控生成**：来源摘录必须匹配，指标由代码计算，实现状态、风险和个人贡献在面试稿与汇报稿中保持一致。
 
 适合需要用自然语言推动开发，同时希望积累技术/产品理解、项目证据和职业表达的人。覆盖 AI 应用工程师、B 端产品经理及项目交付等视角，叙述随实际岗位调整。
 
@@ -28,7 +28,16 @@ WorkLens 把这些问题接到每次真实任务后面，在细节还没有丢�
 
 复杂任务展开，小样式修改简短解释。报告在一次有实质产出的交付后生成，不重复出现在每条进度消息里。
 
-## 两种使用方式
+## 使用方式
+
+需要 Python 3 标准库。宿主先将实际材料整理为[证据卡](references/evidence-card.md)，再运行生成器：
+
+```bash
+python3 scripts/worklens.py --card eval/v3/cards/C02.json --output report.md --audit audit.json
+```
+
+上面的卡是构造示例；处理真实任务时替换为该任务的证据卡。缺少验证、状态或职责时，报告保留未知，不补出成功记录。模型可选地调整术语顺序，不直接改写最终事实和指标。
+
 
 ### 完成任务并解释
 
@@ -70,7 +79,7 @@ WorkLens 把这些问题接到每次真实任务后面，在细节还没有丢�
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills/work-impact-debrief"
-cp -R ./SKILL.md ./agents ./references "${CODEX_HOME:-$HOME/.codex}/skills/work-impact-debrief/"
+cp -R ./SKILL.md ./agents ./references ./scripts "${CODEX_HOME:-$HOME/.codex}/skills/work-impact-debrief/"
 ```
 
 如果已经安装了同名 Skill，先比较版本与本地修改，再合并文件。随后在新会话中使用 `$work-impact-debrief`。
@@ -95,24 +104,31 @@ cp -R ./SKILL.md ./agents ./references "${CODEX_HOME:-$HOME/.codex}/skills/work-
 - 个人贡献按实际要求、判断、实现和复核记录，不把 AI 提出的方案自动归给使用者。
 - 保存报告、查询生产、发送消息和发布代码遵循原授权；Skill 不持续监听电脑。
 
-## 测试与适用边界
+## 测试与验收
 
-测试设计、原始输出和逐例人工检查见 [EVALUATION.md](EVALUATION.md)。测试材料使用构造场景，且不直接复制原业务资料。
+当前 0.3 版本针对历史测试中的事实增补、指标误写、失败状态和贡献归属问题加入了程序校验。已通过 18 项自动化测试，核对原 7 类场景与 3 个新增数据/信息不足场景，并保存了 7 类本机模型计划联调结果。
 
-可阅读一份[人工核对后的讲解样例](eval/EXPECTED_EXAMPLE.md)。该示例单独标注，不冒充模型原始输出，也不计入自动生成通过数。
+- 规则满足率由 28/35 计算为 80%，不更名为模型准确率。
+- 离线通过率由 56% 到 72%，计算为增加 16 个百分点；保留权限退化和评分未复核。
+- 403、未生成、未发布不会变成联调成功；职责缺失不会补出个人设计或验收。
+- 模型计划试图添加事实、测试或不支持的术语时，会被拒绝并使用原事实卡生成。
 
-报告生成测试可以检查术语解释、指标口径和事实边界；它不能单独证明使用者的面试表现、理解程度或录用结果有所提升，也不覆盖实际工具执行与所有宿主的自动触发行为。
+完整方法、通过范围和历史对照见 [EVALUATION.md](EVALUATION.md)，原始历史失败记录仍可追溯。当前结果验证的是引用、计算和报告生成约束，未把它写成全领域准确率或真人面试提升。
 
-复跑方法见 [eval/README.md](eval/README.md)。无需为了使用 Skill 安装测试模型；本机模型只是这次可复现的测试后端。
+查看[规则编排报告](eval/v3/results/C02.md)、[评测报告](eval/v3/results/C03.md)、[导出失败报告](eval/v3/results/C05.md)、[信息不足初稿](eval/v3/results/C07.md)。
+
+来源卡应来自实际材料，术语适配需结合业务核对；程序不替代来源真实性和真人理解验证。后续可按[复述验证方法](eval/USER_CHECK.md)检查能否独立讲清。
 
 ## 文件结构
 
 ```text
-SKILL.md                         Skill 入口
+SKILL.md                         Skill 入口与调用流程
 agents/openai.yaml               展示名称和默认调用提示
-references/                     指标证据口径、任务映射样例
-eval/cases.json                  构造测试输入及检查点
-eval/run_eval.py                 本机 Ollama 报告测试运行器
-eval/results/                    原始输出、运行参数与检查记录
-EVALUATION.md                    测试结论与局限
+scripts/worklens.py              来源校验、指标计算与受控报告生成器
+references/evidence-card.md      证据卡与支持领域
+references/                     指标与讲解参考
+tests/                          自动化回归
+eval/v3/                        原 7 类/新增 3 类卡、模型计划与最终报告
+eval/history/                   历史评测结论
+EVALUATION.md                    当前修复与验收结果
 ```

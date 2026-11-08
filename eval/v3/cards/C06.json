@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "title": "C06",
+  "profile": "batch",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "请把这次任务解读为专业能力并写工程师面试和工作汇报。原任务是导入供应商CSV时别一条失败就不知道哪些写进去了。改动：先逐行校验并生成错误行报告，合法批次在事务里写入；用外部供应商编码做唯一键，重复请求返回同一批次状态；日志记录批次号和成功/失败数量。构造数据验证了重复批次不新增记录，写入中断会回滚。只在本地验证，没有生产文件和真实人工耗时。500字以内。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "导入供应商CSV时别一条失败就不知道哪些写进去了"
+    },
+    {
+      "id": "f2",
+      "kind": "change",
+      "source": "s1",
+      "quote": "先逐行校验并生成错误行报告，合法批次在事务里写入"
+    },
+    {
+      "id": "f3",
+      "kind": "change",
+      "source": "s1",
+      "quote": "用外部供应商编码做唯一键，重复请求返回同一批次状态"
+    },
+    {
+      "id": "f4",
+      "kind": "change",
+      "source": "s1",
+      "quote": "日志记录批次号和成功/失败数量"
+    },
+    {
+      "id": "f5",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "构造数据验证了重复批次不新增记录，写入中断会回滚"
+    },
+    {
+      "id": "f6",
+      "kind": "status",
+      "source": "s1",
+      "quote": "只在本地验证"
+    },
+    {
+      "id": "f7",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "没有生产文件和真实人工耗时"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "validation",
+      "facts": [
+        "f2"
+      ]
+    },
+    {
+      "term": "transaction",
+      "facts": [
+        "f2",
+        "f5"
+      ]
+    },
+    {
+      "term": "idempotency",
+      "facts": [
+        "f3"
+      ]
+    },
+    {
+      "term": "observability",
+      "facts": [
+        "f4"
+      ]
+    }
+  ],
+  "metrics": [],
+  "brief": false
+}

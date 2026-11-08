@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "title": "C07",
+  "profile": "unknown",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "我今天加了个筛选功能，帮我专业复盘，写面试和工作汇报。没有提供页面、角色、筛选字段、代码或验证材料。现在先在对话给我一个能用的初稿，别写数字，也别替我改东西。300字以内。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "我今天加了个筛选功能"
+    },
+    {
+      "id": "f2",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "没有提供页面、角色、筛选字段、代码或验证材料"
+    },
+    {
+      "id": "f3",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "别写数字，也别替我改东西"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "scope",
+      "facts": [
+        "f2"
+      ]
+    }
+  ],
+  "metrics": [],
+  "brief": false
+}

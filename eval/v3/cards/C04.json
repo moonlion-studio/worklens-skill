@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "title": "C04",
+  "profile": "visual",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "这次只把按钮颜色改成统一蓝色，左右间距从8px改成12px。只查看了一个本地页面，未做用户测试，没改流程和接口。我想写汇报和面试素材，你用专业语言解释下，200字以内。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "我想写汇报和面试素材"
+    },
+    {
+      "id": "f2",
+      "kind": "change",
+      "source": "s1",
+      "quote": "按钮颜色改成统一蓝色，左右间距从8px改成12px"
+    },
+    {
+      "id": "f3",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "只查看了一个本地页面"
+    },
+    {
+      "id": "f4",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "未做用户测试，没改流程和接口"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "consistency",
+      "facts": [
+        "f2"
+      ]
+    }
+  ],
+  "metrics": [],
+  "brief": true
+}

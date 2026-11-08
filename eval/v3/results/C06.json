@@ -1,0 +1,27 @@
+{
+  "case": "C06",
+  "model": "qwen2.5:7b",
+  "model_role": "bounded concept ordering only; facts and narratives rendered by code",
+  "options": {
+    "temperature": 0.2,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 300
+  },
+  "raw_plan": "{\"concept_order\": [\"transaction\", \"idempotency\", \"validation\", \"observability\"]}",
+  "transport_error": null,
+  "model_done_reason": "stop",
+  "seconds": 1.737,
+  "audit": {
+    "plan_status": "accepted",
+    "rejected_reason": null,
+    "source_hashes": {
+      "s1": "1a2289c40063a4fbf527d831fe7d129dfa27dd833cc96c054842e41a7f7e10ff"
+    },
+    "facts": 7,
+    "metrics": [
+      "未提交可计算的指标；不生成效率、质量或业务收益数字。"
+    ],
+    "renderer": "worklens-0.3"
+  }
+}

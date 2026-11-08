@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "title": "C03",
+  "profile": "evaluation",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "帮我把复测结果写成专业报告。构造开发集25题，历史基线14题通过，今天候选18题通过；条件不同时间运行，没有随机分流。逐题比较：5题从未通过变通过，1题从通过变未通过，其余状态不变。退化题把无权限角色说成可下载。评分是AI助手完成，业务方和我没有独立复核。写领域、判断、指标、工程师面试、汇报和追问，600字以内。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "帮我把复测结果写成专业报告"
+    },
+    {
+      "id": "f2",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "构造开发集25题，历史基线14题通过，今天候选18题通过"
+    },
+    {
+      "id": "f3",
+      "kind": "status",
+      "source": "s1",
+      "quote": "条件不同时间运行，没有随机分流"
+    },
+    {
+      "id": "f4",
+      "kind": "change",
+      "source": "s1",
+      "quote": "5题从未通过变通过，1题从通过变未通过，其余状态不变"
+    },
+    {
+      "id": "f5",
+      "kind": "risk",
+      "source": "s1",
+      "quote": "退化题把无权限角色说成可下载"
+    },
+    {
+      "id": "f6",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "评分是AI助手完成，业务方和我没有独立复核"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "regression",
+      "facts": [
+        "f4",
+        "f5"
+      ]
+    },
+    {
+      "term": "historical",
+      "facts": [
+        "f2",
+        "f3"
+      ]
+    },
+    {
+      "term": "gold",
+      "facts": [
+        "f6"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "kind": "offline_comparison",
+      "refs": [
+        "f2"
+      ],
+      "total": 25,
+      "baseline": 14,
+      "candidate": 18
+    }
+  ],
+  "brief": false
+}

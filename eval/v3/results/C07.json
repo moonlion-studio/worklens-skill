@@ -1,0 +1,27 @@
+{
+  "case": "C07",
+  "model": "qwen2.5:7b",
+  "model_role": "bounded concept ordering only; facts and narratives rendered by code",
+  "options": {
+    "temperature": 0.2,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 300
+  },
+  "raw_plan": "{\"concept_order\": [\"scope\"]}",
+  "transport_error": null,
+  "model_done_reason": "stop",
+  "seconds": 0.768,
+  "audit": {
+    "plan_status": "accepted",
+    "rejected_reason": null,
+    "source_hashes": {
+      "s1": "171dcef3c37afe3739fc3ca4dce089cf4932b033d6132f9150d7512d5aa8c999"
+    },
+    "facts": 3,
+    "metrics": [
+      "未提交可计算的指标；不生成效率、质量或业务收益数字。"
+    ],
+    "renderer": "worklens-0.3"
+  }
+}

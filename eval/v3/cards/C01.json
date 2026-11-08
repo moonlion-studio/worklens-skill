@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "title": "C01",
+  "profile": "async-feedback",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "请根据交付材料复盘本次改动，给AI应用工程师面试和工作汇报讲法。原任务：预约保存了还一直转圈，改好。改动前伪代码：await saveBooking(); await syncAllHistory(); showSuccess()。改动后：const receipt=await saveBooking(); applyReceipt(receipt); showSuccess(); syncAllHistoryInBackground()；旧响应不能覆盖较新的预约。交付记录：重复提交和时段冲突检查通过；开发包已上传，未正式发布；没有真实手机耗时前测和后测。报告别超过700字。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "预约保存了还一直转圈，改好"
+    },
+    {
+      "id": "f2",
+      "kind": "change",
+      "source": "s1",
+      "quote": "const receipt=await saveBooking(); applyReceipt(receipt); showSuccess(); syncAllHistoryInBackground()"
+    },
+    {
+      "id": "f3",
+      "kind": "change",
+      "source": "s1",
+      "quote": "旧响应不能覆盖较新的预约"
+    },
+    {
+      "id": "f4",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "重复提交和时段冲突检查通过"
+    },
+    {
+      "id": "f5",
+      "kind": "status",
+      "source": "s1",
+      "quote": "开发包已上传，未正式发布"
+    },
+    {
+      "id": "f6",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "没有真实手机耗时前测和后测"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "receipt",
+      "facts": [
+        "f2"
+      ]
+    },
+    {
+      "term": "decoupling",
+      "facts": [
+        "f2"
+      ]
+    },
+    {
+      "term": "ordering",
+      "facts": [
+        "f3"
+      ]
+    }
+  ],
+  "metrics": [],
+  "brief": false
+}

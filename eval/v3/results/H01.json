@@ -1,0 +1,12 @@
+{
+  "plan_status": "not_requested",
+  "rejected_reason": null,
+  "source_hashes": {
+    "s1": "328fe4c8bedb39aec3eace7ae0f8e8cfab40bb978ec3b7f8947811e9b5efac9f"
+  },
+  "facts": 2,
+  "metrics": [
+    "所给样本规则满足率：12/16 = 75%；不代表 LLM 准确率或真实采纳率。"
+  ],
+  "renderer": "worklens-0.3"
+}

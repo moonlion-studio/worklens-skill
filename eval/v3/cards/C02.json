@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "title": "C02",
+  "profile": "constraints",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "给我的菜单功能做专业复盘。我用AI写代码，但运行链路是菜品结构化标签→过滤忌口和下架菜→按预算与菜式打分补齐→用户换菜确认；没有调用语言模型。构造验收中35份方案有28份满足预先标注的全部规则，没有采集真实采纳和耗时数据。请告诉我这算什么能力、数据怎样写、面试和汇报怎样讲，别超过700字。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "给我的菜单功能做专业复盘"
+    },
+    {
+      "id": "f2",
+      "kind": "contribution",
+      "source": "s1",
+      "quote": "我用AI写代码"
+    },
+    {
+      "id": "f3",
+      "kind": "change",
+      "source": "s1",
+      "quote": "菜品结构化标签→过滤忌口和下架菜→按预算与菜式打分补齐→用户换菜确认"
+    },
+    {
+      "id": "f4",
+      "kind": "change",
+      "source": "s1",
+      "quote": "没有调用语言模型"
+    },
+    {
+      "id": "f5",
+      "kind": "verification",
+      "source": "s1",
+      "quote": "构造验收中35份方案有28份满足预先标注的全部规则"
+    },
+    {
+      "id": "f6",
+      "kind": "unknown",
+      "source": "s1",
+      "quote": "没有采集真实采纳和耗时数据"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "constraints",
+      "facts": [
+        "f3"
+      ]
+    },
+    {
+      "term": "rules",
+      "facts": [
+        "f3",
+        "f4"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "kind": "rule_rate",
+      "refs": [
+        "f5"
+      ],
+      "total": 35,
+      "passed": 28
+    }
+  ],
+  "brief": false
+}

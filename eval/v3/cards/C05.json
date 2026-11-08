@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "title": "C05",
+  "profile": "export",
+  "sources": [
+    {
+      "id": "s1",
+      "text": "帮我复盘资料导出任务并写面试汇报。事实：我要求增加导出；AI提出服务端生成文件的方案并写了代码。我只确认需求，还没有评审方案或验收。接口联调返回403权限拒绝，未生成文件，未发布。不能改程序或帮我上线，400字以内。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "kind": "request",
+      "source": "s1",
+      "quote": "我要求增加导出"
+    },
+    {
+      "id": "f2",
+      "kind": "contribution",
+      "source": "s1",
+      "quote": "AI提出服务端生成文件的方案并写了代码"
+    },
+    {
+      "id": "f3",
+      "kind": "contribution",
+      "source": "s1",
+      "quote": "我只确认需求，还没有评审方案或验收"
+    },
+    {
+      "id": "f4",
+      "kind": "status",
+      "source": "s1",
+      "quote": "接口联调返回403权限拒绝，未生成文件，未发布"
+    },
+    {
+      "id": "f5",
+      "kind": "change",
+      "source": "s1",
+      "quote": "AI提出服务端生成文件的方案并写了代码"
+    }
+  ],
+  "concepts": [
+    {
+      "term": "authorization",
+      "facts": [
+        "f4"
+      ]
+    },
+    {
+      "term": "delivery",
+      "facts": [
+        "f2",
+        "f4"
+      ]
+    }
+  ],
+  "metrics": [],
+  "brief": false
+}
