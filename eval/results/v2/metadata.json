@@ -1,0 +1,18 @@
+{
+  "model": "qwen2.5:7b",
+  "date": "2026-11-08",
+  "scope": "报告生成行为测试；不验证工具执行、自动触发或真人理解提升",
+  "case_count": 7,
+  "options": {
+    "temperature": 0.2,
+    "seed": 42,
+    "num_ctx": 16384,
+    "num_predict": 1800
+  },
+  "skill_hashes": {
+    "SKILL.md": "6f81794403eef4722d1f5d483cc31f02d562cbd6a301e4978c10cef6393977b2",
+    "references/metrics-and-evidence.md": "df16ca461a9af7388181266f0c944bc575bd60ef4bd1a27bc53cb1b0986734c1",
+    "references/task-patterns.md": "8695fddb12f51f19282dd1d7e4cba860331053c2509af98236d8db2704547904"
+  },
+  "grading": "任务作者人工逐例复核；不是独立盲评；评分规则未进入模型输入"
+}
