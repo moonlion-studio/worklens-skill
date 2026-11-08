@@ -2,7 +2,15 @@
 
 **事情做完，也能讲清楚。**
 
-[GitHub 项目仓库](https://github.com/moonlion-studio/worklens-skill)
+### 一键复制安装
+
+点击下方代码块右上角的复制按钮，把命令发给你的 Agent 安装，或直接在终端运行：
+
+```bash
+npx skills add moonlion-studio/worklens-skill --skill work-impact-debrief
+```
+
+按提示选择 Agent 与安装位置。命令需要 Node.js / npx 环境；也可以让支持 Skill 安装的 Agent 根据本仓库完成安装。
 
 **WorkLens 是一款面向 AI 编程与知识工作的专业复盘 Skill，帮助你把实际完成的任务，沉淀成能够理解、复述，并用于面试和工作汇报的项目经验。**
 
