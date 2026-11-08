@@ -4,6 +4,8 @@
 
 仓库名：`worklens-skill`
 
+项目地址：https://github.com/moonlion-studio/worklens-skill
+
 一句话：**事情做完，也能讲清楚。**
 
 ## About 简介
